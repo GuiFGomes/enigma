@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int t, r[27];
+
+int main()
+{
+    char C[7][27], c, c1, c2;
+
+    for(int i=1;i<=6;i++)
+        for(int j=1;j<=26;j++)
+            cin>>C[i][j];
+
+    for(int j=1;j<=26;j++){
+
+        t=0;
+        for(int i=1;i<=6;i++)
+            r[(C[i][j]-96)]++;
+
+    }
+
+    for(int i=1;i<=26;i++){
+        
+        c=i+96;
+        
+        cout<<"numero de letra(s) "<<c<<" = "<<r[i]<<endl;
+    }
+    
+}

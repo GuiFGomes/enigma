@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+string S;
+
+int main()
+{
+    
+    cin>>S;
+
+    cout<<"\n";
+
+    for(int i=0;i<26;i++){
+        for(int j=0;j<S.size();j++){
+
+            cout<<S[j];
+
+            S[j]++;
+
+            if(S[j]==96+27)
+                S[j]=97;
+        }
+        cout<<"\n";
+    }
+}

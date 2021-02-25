@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+string S;
+
+int main()
+{
+    char C[7][27], c, c1, c2;
+    int t, r[27];
+
+    for(int i=1;i<=6;i++)
+        for(int j=1;j<=26;j++)
+            cin>>C[i][j];
+
+    for(int j=1;j<=26;j++){
+
+        t=0;
+        for(int i=1;i<=6;i++)
+            t+=(C[i][j]-96);
+
+        t%=26;
+        if(t==0)
+            t=26;
+
+        r[j]=t;
+
+        c=t+96;
+        c1=j+96;
+
+        cout<<"coluna "<<c1<<": "<<c<<"\n";
+    }
+
+    cin>>S;
+
+    for(int i=0;i<S.size();i++){
+
+        c2=r[S[i]-96]+96;
+
+        cout<<c2;
+    }
+}
